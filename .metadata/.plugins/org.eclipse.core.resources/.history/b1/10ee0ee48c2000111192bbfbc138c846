@@ -1,0 +1,16 @@
+package com.microjpa.product_service;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+
+@SpringBootApplication
+@EnableDiscoveryClient
+//@EnableFeignClients enables Feign client support in a Spring Boot application so that microservices can communicate with each other using simple interfaces instead of writing HTTP calls manually.
+public class ProductServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ProductServiceApplication.class, args);
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.microjpa.order_service.controller;
+
+public class OrderController {
+
+}

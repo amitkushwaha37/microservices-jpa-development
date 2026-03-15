@@ -1,0 +1,12 @@
+package com.microjpa.product_service.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+//@Entity is a JPA annotation used to mark a Java class as a database table.
+@Entity   // tells JPA this class is a table  
+@Table(name="products")
+public class Product {
+
+	
+}

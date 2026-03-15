@@ -1,0 +1,27 @@
+package com.microjpa.order_service.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.microjpa.order_service.client.ProductClient;
+import com.microjpa.order_service.entity.Order;
+import com.microjpa.order_service.repository.OrderRepository;
+
+@Service
+public class OrderService {
+
+	@Autowired
+	private OrderRepository repository;
+	@Autowired
+	private ProductClient productClient;
+	
+	public Order createOrder(Order order) {
+		
+		productClient.getProduct(order.getProductId());
+		 // reduce stock
+	    productClient.reduceQuantity(order.getProductId(), order.getQuantity());
+		
+		return repository.save(order);
+	}
+	
+}

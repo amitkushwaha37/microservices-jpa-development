@@ -1,0 +1,5 @@
+package com.microjpa.product_service.service;
+
+public class ProductService {
+
+}

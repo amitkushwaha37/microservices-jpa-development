@@ -1,0 +1,5 @@
+package com.microjpa.order_service.service;
+
+public class OrderService {
+
+}

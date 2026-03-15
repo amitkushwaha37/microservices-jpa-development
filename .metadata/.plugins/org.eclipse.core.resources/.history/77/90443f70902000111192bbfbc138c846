@@ -1,0 +1,9 @@
+package com.microjpa.order_service.client;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(name="PRODUCT-SERVICE")
+//“This interface will call another microservice named PRODUCT-SERVICE.”
+public class ProductClient {
+
+}
